@@ -67,7 +67,7 @@ max_loss_str = str(max_loss)
 avg_monthly_change_str = str(avg_monthly_change)
 
 #Print everything
-report_contents = "Financial Analysis \n" + "---------------------------- \n" + "Total Months: " + total_months_str + "\n" + "Total: $" + total_profloss_str + "\n" + "Average Change: $" + avg_monthly_change_str + "\n" + "Greatest Increase in Profits:" + max_profit_date + " $" + max_profit_str + "\n" + "Greatest Decrease in Profits:" + max_loss_date + " $" + max_loss_str + "\n"
+report_contents = "Financial Analysis \n" + "---------------------------- \n" + "Total Months: " + total_months_str + "\n" + "Total: $" + total_profloss_str + "\n" + "Average Change: $" + avg_monthly_change_str + "\n" + "Greatest Increase in Profits:" + max_profit_date + " ($" + max_profit_str + ")\n" + "Greatest Decrease in Profits:" + max_loss_date + " ($" + max_loss_str + ")\n"
 print(report_contents)
  
 #Make file
