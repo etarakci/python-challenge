@@ -52,7 +52,7 @@ while i < len(cands_list):
         i+=1
 
 #print things and write to file
-report =open("report.txt","a+")
+report = open("PyPoll/report.txt","a+")
 report.truncate(0)
 
 total_votes_str = str(total_votes)
