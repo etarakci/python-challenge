@@ -1,13 +1,10 @@
+#Python-Challenge hw for UCB Data Analytics Bootcamp by Erendiz Tarakci
+#last updated 3/21/2020
+
 import os
 import csv
 csvpath = os.path.normpath("/Users/erendiztarakci/UCBWork/UCB-BER-DATA-PT-02-2020-U-C/02-Homework/03-Python/Instructions/PyPoll/Resources/election_data.csv")
 #Three comlumns:  Voter ID, County, and Candidate
-#Calculate the following:
-#The total number of votes cast
-#A complete list of candidates who received votes
-#The percentage of votes each candidate won
-#The total number of votes each candidate won
-#The winner of the election based on popular vote.
 
 voter_dict = {}
 with open(csvpath) as csvfile:
@@ -60,14 +57,14 @@ report.truncate(0)
 
 total_votes_str = str(total_votes)
 
-print("ELECTION RESULTS \n ------------------------\n")
-report.write("ELECTION RESULTS \n ------------------------\n")
+print("ELECTION RESULTS \n------------------------")
+report.write("ELECTION RESULTS \n------------------------\n")
 
-print(total_votes)
-report.write(total_votes_str)
+print("Total Votes: " ,total_votes)
+report.write("Total Votes: " + total_votes_str + "\n")
 
 print("------------------------")
-report.write("------------------------ \n")
+report.write("------------------------\n")
 
 for cand in candidates:
     percent = str(round(percent_votes[cand]*100,2))
@@ -76,8 +73,16 @@ for cand in candidates:
     print(contents)
     report.write(contents)
     
+print("------------------------")
+report.write("------------------------\n")
+
 print("Winner: " , winner)
 report.write("Winner: " + winner + "\n")
+
+print("------------------------")
+report.write("------------------------\n")
+
+report.close()
 
 
 
